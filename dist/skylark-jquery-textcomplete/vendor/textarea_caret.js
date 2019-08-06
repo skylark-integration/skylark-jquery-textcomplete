@@ -1,0 +1,9 @@
+/**
+ * skylark-jquery-textcomplete - A version of jquery-textcomplete.js that ported to running on skylarkjs.
+ * @author Hudaokeji, Inc.
+ * @version v0.9.0
+ * @link https://github.com/skylark-integration/skylark-jquery-textcomplete/
+ * @license MIT
+ */
+defin(["skylark-jquery","./textcomplete"],function(e){var t=["direction","boxSizing","width","height","overflowX","overflowY","borderTopWidth","borderRightWidth","borderBottomWidth","borderLeftWidth","borderStyle","paddingTop","paddingRight","paddingBottom","paddingLeft","fontStyle","fontVariant","fontWeight","fontStretch","fontSize","fontSizeAdjust","lineHeight","fontFamily","textAlign","textTransform","textIndent","textDecoration","letterSpacing","wordSpacing","tabSize","MozTabSize"],o="undefined"!=typeof window,r=o&&null!=window.mozInnerScreenX;e.fn.textcomplete.getCaretCoordinates=function(e,n,i){if(!o)throw new Error("textarea-caret-position#getCaretCoordinates should only be called in a browser");var d=i&&i.debug||!1;if(d){var a=document.querySelector("#input-textarea-caret-position-mirror-div");a&&a.parentNode.removeChild(a)}var l=document.createElement("div");l.id="input-textarea-caret-position-mirror-div",document.body.appendChild(l);var p=l.style,f=window.getComputedStyle?getComputedStyle(e):e.currentStyle;p.whiteSpace="pre-wrap","INPUT"!==e.nodeName&&(p.wordWrap="break-word"),p.position="absolute",d||(p.visibility="hidden"),t.forEach(function(e){p[e]=f[e]}),r?e.scrollHeight>parseInt(f.height)&&(p.overflowY="scroll"):p.overflow="hidden",l.textContent=e.value.substring(0,n),"INPUT"===e.nodeName&&(l.textContent=l.textContent.replace(/\s/g," "));var c=document.createElement("span");c.textContent=e.value.substring(n)||".",l.appendChild(c);var s={top:c.offsetTop+parseInt(f.borderTopWidth),left:c.offsetLeft+parseInt(f.borderLeftWidth)};return d?c.style.backgroundColor="#aaa":document.body.removeChild(l),s}});
+//# sourceMappingURL=../sourcemaps/vendor/textarea_caret.js.map
