@@ -1,4 +1,4 @@
-defin([
+define([
   "skylark-jquery",
   "./textcomplete"
 ],function ($) {

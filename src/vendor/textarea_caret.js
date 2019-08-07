@@ -1,6 +1,6 @@
-defin([
+define([
   "skylark-jquery",
-  "./textcomplete"
+  "../textcomplete"
 ],function ($) {
 
 // The properties that we copy into a mirrored div.

@@ -1,6 +1,7 @@
-defin([
+define([
   "skylark-jquery",
-  "./textcomplete"
+  "./textcomplete",
+  "./content_editable"
 ],function ($) {
   'use strict';
 

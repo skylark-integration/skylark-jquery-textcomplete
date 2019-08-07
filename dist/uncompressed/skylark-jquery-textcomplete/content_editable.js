@@ -1,6 +1,7 @@
-defin([
+define([
   "skylark-jquery",
-  "./textcomplete"
+  "./textcomplete",
+  "./adapter"
 ],function ($) {
   'use strict';
 
